@@ -106,15 +106,32 @@ $(".toggle_menu").click(function(){
         $( ".tri_prv" ).removeClass( "prv-disable" );
       });
 
+// 
 
+$(window).scroll(function() {    
+  var scroll = $(window).scrollTop();
+
+   //>=, not <=
+  if (scroll >= 10) {
+      $("body").addClass("fixed-hedaer");
+  }
+  else {
+    $("body").removeClass("fixed-hedaer");
+}
+}); //missing );
       // 
 
       $( ".trading_tab ul li" ).on( "click", function() {
         $( this ).find('.Ttab_details').slideToggle();
+        $( this ).toggleClass('tranding_active');
       });
+      $(function() {
+        $('.trading_tab ul li:nth-child(1)').trigger("click");
+      });
+      
 
       $( ".cp_ok" ).on( "click", function() {
-        $(".cookies_pie").hide();
+        $(".banner_pie").hide();
       });
 
       // 

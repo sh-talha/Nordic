@@ -125,6 +125,7 @@ body {
     overflow-x: hidden;
     color: #000;
     background: #F8F7F7;
+    padding-top: 128px;
 }
 
 b {
@@ -140,6 +141,16 @@ b {
 /* header */
 header{
     padding-top: 58px;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    background: #F8F7F7;
+    z-index: 9999;
+    top: 0;
+    transition: all 0.4s ease-in-out;
+}
+.fixed-hedaer header{
+    padding: 29px 0px;
 }
 .header_inner{
     display: flex;
@@ -287,6 +298,12 @@ header{
 }
 .banner_main{
     position: relative;
+}
+.des_block{
+    display: block;
+}
+.mob_block{
+    display: none;
 }
 .banner_pie{
     position: fixed;
@@ -745,7 +762,6 @@ header{
     font-size: 16px;
     line-height: 141.52%;
     color: #000000;
-    opacity: 0.25; 
 }
 .pass_view{
     position: absolute;
@@ -1464,36 +1480,7 @@ footer .header_cta2::after{
 }
 
 @media (max-width:767px){
-    .banner_left, .banner_right,
-    .dy_portLeft, .dy_portRight,
-    .portRight_block, .oci_left, .oci_right,
-    .tranding_topLeft, .tranding_topRight, .awrpla_left,
-    .awrpla_right, .topInvestr_block, .tr_skBlock .awtp_block,
-    .announcements_left, .announcements_right {
-        width: 100%;
-    }
-    .accT_inner, .open_accInner, .tranding_top,
-    .award-platformInner, .footer_menu, .footer_nav ul{
-        flex-wrap: wrap;
-    }
-    .accT_card{
-        width: 100%;
-    }
-    .footer_nav{
-        flex-wrap: wrap;
-        width: 100%;
-        margin: 0; 
-    }
-    .cookies_pie{
-        width:347px;
-    }
-    .ttr_btns .site_btn {
-        margin-right: 20px;
-        width: 150px;
-    }
-    .ttr_block{
-        padding: 16px;
-    }
+    
     /* menu */
     .toggle_menu, .mobile_logo{
         display: block;
@@ -1619,5 +1606,331 @@ footer .header_cta2::after{
         font-size: 16px;
         line-height: 16px;
         margin-left: 0;
+    }
+    /* home sections */
+    .banner_left, .banner_right,
+    .dy_portLeft, .dy_portRight,
+    .portRight_block, .oci_left, .oci_right,
+    .tranding_topLeft, .tranding_topRight, .awrpla_left,
+    .awrpla_right, .topInvestr_block, .tr_skBlock .awtp_block,
+    .announcements_left, .announcements_right {
+        width: 100%;
+    }
+    .accT_inner, .open_accInner, .tranding_top,
+    .award-platformInner, .footer_menu, .footer_nav ul{
+        flex-wrap: wrap;
+    }
+    .accT_card{
+        width: 100%;
+    }
+    .footer_nav{
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0; 
+    }
+    .cookies_pie{
+        width:347px;
+    }
+    .ttr_btns .site_btn {
+        margin-right: 20px;
+        width: 150px;
+    }
+    .ttr_block{
+        padding: 16px;
+    }
+
+    body{
+        padding-top: 90px;
+    }
+    .site_container{
+        padding: 0px 14px;
+    }
+    .fixed-hedaer header {
+        padding: 18px 0px;
+    }
+    .banner_inner{
+        margin-top: 28px;
+    }
+    .banner_left{
+        order: 2;
+        margin-top: 14px;
+        padding-right: 14px;
+    }
+    .banner_left h2{
+        font-size: 32px;
+        line-height: 140%;
+    }
+    .banner_left p{
+        margin: 12px 0px 24px 0px;
+        line-height: 140%;
+    }
+    .banner_btn .btn_blue{
+        margin-right: 17px;
+        width: 165px;
+    }
+    .banner_btn .site_btn:nth-child(2){
+        width: 165px;
+        margin-right: 0;
+    }
+    .banner_right{
+        order: 1;
+        padding-right: 14px;
+    }
+    .banner_img{
+        position: unset;
+        display: block;
+        width: 100%;
+        margin-left: -14px;
+    }
+    .banner_partnar{
+        order: 3;
+        width: calc(100% + 14px);
+        overflow: scroll;
+        margin-top: 64px;
+    }
+    .banner_partnar ul{
+        width: 950px;
+    }
+    .banner_partnar ul li {
+        margin-right: 50px;
+    }
+    .banner_main .site_container{
+        padding-right: 0;
+    }
+    .des_block{
+        display: none;
+    }
+    .mob_block{
+        display: block;
+    }
+    /* account type */
+    .accT_main .site_container{
+        padding-right: 0px;
+    }
+    .accT_text{
+        margin-top: 72px;
+    }
+    .accT_text h2{
+        line-height: 25px;
+    }
+    .accT_inner{
+        margin-top: 37px;
+        flex-wrap: nowrap;
+        overflow: scroll;  
+    }
+    .accT_card{
+        width: 310px;
+        margin-right: 16px; 
+    }
+    .accT_cardTop{
+        border-radius: 32px;
+        padding: 14px 16px 24px 16px;
+    }
+    .accT_cardImg {
+        display: block;
+        width: 100px;
+        height: 100px;
+    }
+    .accT_cardTop h3{
+        font-size: 18px;
+        line-height: 18px;
+        margin-top: 16px;  
+    }
+    .accT_cardTop p{
+        font-size: 14px;
+        line-height: 20px;
+        max-width: 278px; 
+    }
+    .accT_btn .card_btn{
+        width: 130px;
+        margin-right: 0; 
+    }
+    .accT_btn .card_btn.card_btnGreen,
+    .accT_btn .card_btn.card_btnBlack{
+        margin-right: 16px;
+    }
+    .accT_list{
+        padding: 20px 16px 36px 16px;  
+    }
+    .accT_list ul li{
+        margin-bottom: 10px;
+        padding-bottom: 10px;   
+    }
+    .list_para p{
+        font-size: 14px;
+        line-height: 20px;
+        margin-left: 10px; 
+    }
+    .accT_card{
+       border-radius: 32px; 
+    }
+    .accT_card:nth-child(2) .accT_list, .accT_card:nth-child(3) .accT_list {
+        padding: 10px 6px 24px 6px;
+    }
+    .accT_card:nth-child(2) .accT_cardTop{
+        padding: 6px 4px 24px 4px; 
+    }
+    .dy_portInner{
+        margin-top: 95px; 
+    }
+    .dy_portLeft h2{
+        font-size: 24px;
+        line-height: 25px;  
+    }
+    .dy_portLeft h3{
+        font-size: 18px;
+        line-height: 160%;
+        max-width: 346px;
+        margin: 23px 0px 16px 0px;  
+    }
+    .dy_portLeft p{
+        margin-bottom: 32px; 
+    }
+    .dy_portLeft .site_btn{
+        width: 165px; 
+    }
+    .dy_portRight{
+        display: none;
+    }
+    .trading_tab{
+        margin: 32px 0 0 0;
+    }
+    .trading_tab ul li{
+        position: relative;
+        background: #FFFFFF;
+        border-radius: 18px;
+        height: auto;  
+        margin-right: 0;
+        margin-top: 15px;
+        width:100%
+    }
+    .trading_tab ul li a{
+        height: 68px;
+        border-radius: 18px;  
+        font-size: 14px;
+        line-height: normal;
+        text-align: left;
+        padding: 24px;
+        color: #000000;
+        justify-content: space-between;
+        border: none;
+    }
+    .trading_tab ul li:nth-child(4){
+        margin-left: 0;
+    }
+    .tab_down {
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        border: 1px solid rgba(151, 151, 151, 0.2);
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 16px;
+        right: 16px;  
+        transition: all 0.4s ease-in-out; 
+    }
+    .Ttab_details{
+        position: unset;
+        border-radius: 0;
+        box-shadow: none;
+        border-bottom-left-radius: 18px;
+        border-bottom-right-radius: 18px;
+        padding: 0px 24px 24px 24px;  
+    }
+    .Ttab_details h3{
+        display: none;  
+    }
+    .Ttab_details p{
+        margin: 0;
+        text-align: left;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 140%;
+        max-width: 255px;
+        color: rgba(0, 0, 0, 0.5);  
+    }
+    .trading_tab ul li.tranding_active, .tranding_active .Ttab_details{
+        background: linear-gradient(0deg, rgba(60, 126, 226, 0.1), rgba(60, 126, 226, 0.1)), #FFFFFF;
+    }
+    .tranding_active .tab_down{
+        transform: rotate(-180deg);
+        background: #457CE9;
+    }
+    .tranding_active .tab_down svg path{
+        stroke: #fff;
+    }
+    /* home form */
+    .open_accInner{
+        margin-top: 100px;
+        padding: 16px 16px 32px 16px;
+        border-radius: 24px;   
+    }
+    .oci_left{
+        border-radius: 20px;   
+    }
+    .oci_leftImg{
+        display: block;
+        padding-top: 36px;
+        text-align: center;  
+    }
+    .oci_leftImg .mob_block{
+        margin: auto; 
+    }
+    .form_shapes{
+        left: -16px;
+        width: 90px;
+        height: 90px;
+        z-index: 9;
+        top: -16px;
+        border-radius: 24px; 
+    }
+    .form_oval{
+        width: 40px;
+    }
+    .form_path{
+        width: 30px;  
+        left: 45px;
+        top: 15px;
+    }
+    .form_msg{
+        width: 70px;
+        top: 62px;
+        right: 28px;   
+    }
+    .oci_right{
+        padding-left: 0; 
+    }
+    .oci_right h2{
+        font-size: 24px;
+        line-height: 25px;
+    }
+    .oci_right p{
+        font-size: 14px;
+        line-height: 140%;
+        max-width: 315px;
+        margin: 12px 0px 32px 0px;
+    }
+    .gorm_group{
+        margin-bottom: 15px;
+    }
+    .gorm_group input{
+        line-height: 16px;
+        padding: 20px 22px;
+        height: 54px;
+    }
+    .pass_view{
+        right: 18px;
+        top: 14px;
+    }
+    .form_btns{
+       margin-top: 47px;   
+    }
+    .form_btns .site_btn{
+        margin-right: 0px;
+    }
+    .form_btns .btn_blue{
+        margin-right: 17px;
     }
 }
